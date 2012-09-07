@@ -65,4 +65,5 @@ puts "Ends: "
 goal = readline.strip
 path = bfs(start, goal, nodes)
 
+// Printing names of stops from path (to_s)
 path.each { |node| puts node }
