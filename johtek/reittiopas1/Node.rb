@@ -18,7 +18,6 @@ class Node
     @x = x
     @y = y
     @neighbours = neighbours
-    @colour = :white
   end
 
   def to_s
