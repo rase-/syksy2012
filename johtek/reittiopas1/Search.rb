@@ -25,6 +25,7 @@ def bfs(start_id, goal_id, nodes)
       end
       if node.colour == :white
         node.previous = current
+        node.colour = :gray
         nodelist.push node
       end
     end
@@ -43,12 +44,14 @@ nodes = {}
 
 # Nodes are initialized from hashes generated from json
 # Previous attribute also added for path decoding
+# Colour attribute added for searching, initialized to :white
 hashes.each do |hash|
   node = Node.new.hash_initialize(hash)
   nodes[node.id] = node
   class << node
-    attr_accessor :previous
+    attr_accessor :previous, :colour
   end
+  node.colour = :white
 end
 
 # This block of code fills neighbours for ids

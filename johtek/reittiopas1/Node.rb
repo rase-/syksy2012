@@ -1,5 +1,5 @@
 class Node
-  attr_accessor :id, :name, :address, :x, :y, :neighbours, :colour
+  attr_accessor :id, :name, :address, :x, :y, :neighbours
 
   def hash_initialize(hash)
     @id = hash["koodi"]
@@ -8,7 +8,6 @@ class Node
     @x = hash["x"]
     @y = hash["y"]
     @neighbours = hash["naapurit"]
-    @colour = :white
     return self
   end
 
