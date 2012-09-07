@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'json'
-require 'Node.rb'
+require './Node.rb'
 
 # Used to decode the path from the goal node to the first
 def decode_path(goal_node)
