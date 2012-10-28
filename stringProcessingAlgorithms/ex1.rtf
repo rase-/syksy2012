@@ -1,0 +1,19 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 String Processing Algorithms, week 1, ex 1\
+\
+Any sorting algorithm that is based on comparison of elements has a lower bound of \uc0\u937 (n log n). With any input n we can form a decision tree where each node is a comparison, and each leaf is a permutation of the given input. In this decision tree, each comparison node has exactly two children. Because each leaf node is a permutation of the original input, there are at least n! leaves. Since the decision tree is a binary tree, it's height is at least around log2(n!). The height of the tree is the worst case amount of comparisons that need to be done to sort the input.\
+\
+log2(n!) is about the same as n log2(n), as know from stirling's approximation\
+log2(n!) = log2(n(n-1)(n-2)\'852*1\
+= log2(n) (log2(n-1) \'85 log2(1)\
+= sum_\{k=1\}^\{n\} log2(k)\
+>= sum_\{k=ceil(n/2)\}^\{n\} log2(k)\
+>= ceil(n/2) log2(ceil(n/2))\
+= \uc0\u937 (n log n)\
+\
+As we can see from here, any comparison-based sorting algorithm will in a worst-case scenario take \uc0\u937 (n log n) time. However, linear algorithms for sorting exist, but they are based on strategies other than comparison. }
