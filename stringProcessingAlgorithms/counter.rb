@@ -13,7 +13,7 @@ puts "Reading and processing"
 character_hash = {}
 word_hash = {}
 file = File.open("english.50MB", "r").each_line do |line|
-  line.downcase.split("").each do |char|c
+  line.downcase.split("").each do |char|
     character_hash = hashValue(char, character_hash)
   end
   
