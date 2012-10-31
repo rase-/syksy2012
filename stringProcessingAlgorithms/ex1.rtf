@@ -9,7 +9,7 @@
 Any sorting algorithm that is based on comparison of elements has a lower bound of \uc0\u937 (n log n). With any input n we can form a decision tree where each node is a comparison, and each leaf is a permutation of the given input. In this decision tree, each comparison node has exactly two children. Because each leaf node is a permutation of the original input, there are at least n! leaves. Since the decision tree is a binary tree, it's height is at least around log2(n!). The height of the tree is the worst case amount of comparisons that need to be done to sort the input.\
 \
 log2(n!) is about the same as n log2(n), as know from stirling's approximation\
-log2(n!) = log2(n(n-1)(n-2)\'852*1\
+log2(n!) = log2(n(n-1)(n-2)\'852*1)\
 = log2(n) (log2(n-1) \'85 log2(1)\
 = sum_\{k=1\}^\{n\} log2(k)\
 >= sum_\{k=ceil(n/2)\}^\{n\} log2(k)\
