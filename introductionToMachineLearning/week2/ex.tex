@@ -22,6 +22,8 @@ Cosine similarity has a range of [-1, 1]. The values of $cos(x, y)$ will range f
 No. Since the cosine similarity measures the cosine of the angle between the two vectors, $x$ and $y$, the vectors need not be exactly the same for the cosine similarity $cos(x,y)$ to be equal to $1$. Instead they just need to be parallel (can even point in opposite direction). However, if the cosine similarity $cos(x,y) = 1$, then we know that vectors $x$ and $y$ differ from each other only by a constant factor.
 
 \subsection{c}
-
+\begin{equation}
+r = \frac{\sum_{i=1}^{n} (x_i - \bar{x}) (y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x}) \sum_{i=1}^{n} (y_i - \bar{y})}}
+\end{equation}
 
 \end{document}
