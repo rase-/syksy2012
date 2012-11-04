@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{mathptmx}
+\title{Introduction to Machine Learning, week 2}
+\author{Tony Kovanen}
+\begin{document}
+
+\section{ex 1}
+\subsection{a}
+The transformation in the case where a term appears in only one document the tf is multiplied by a large factor, where as in the case of all documents it is multiplied by log 1, which actually ends up taking down the value of tf, definitely not increasing it like in the case of a lower df.
+
+\subsection{b}
+The overall effect is that a term frequency of a word in a document is increased based on the inverse document frequency, the bigger the increase the less documents contain this term. The increase is logarithmic so tf still has the main role. The purpose of using this transformation is based on the fact that many words are common in various languages, so finding relevant or interesting words is made easier by this transformation. 
+
+\subsection{c}
+If we for example want to look at the frequency a single customer has bought some product from a supermarket, we might want to do a similar transformation to take into account some very ordinarily bought products that can be found commonly from a majority of customers. An idf transformation here would favor those purchases that are more unique for the user in question, and we would get a better idea of what kind of "user-specific" products are interesting to this person.
+
+\section{ex 2}
+\subsection{a}
+Cosine similarity has a range of [-1, 1]. The values of $cos(x, y)$ will range from $0$ towards $1$ the larger the dot product of $x$ and $y$ is if nonnegative, and from $0$ to $-1$ the more negative the product is.
+
+\subsection{b}
+No. Since the cosine similarity measures the cosine of the angle between the two vectors, $x$ and $y$, the vectors need not be exactly the same for the cosine similarity $cos(x,y)$ to be equal to $1$. Instead they just need to be parallel (can even point in opposite direction). However, if the cosine similarity $cos(x,y) = 1$, then we know that vectors $x$ and $y$ differ from each other only by a constant factor.
+
+\subsection{c}
+
+
+\end{document}
