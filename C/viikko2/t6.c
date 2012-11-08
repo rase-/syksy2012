@@ -9,16 +9,15 @@ struct dListNode {
 
 dListNode* insertElement(dListNode *list, dListNode *pos, int value) {
   struct dListNode addition = dListNode;
-  if (list == NULL) {
+  addition.value = value;
+  if (*list == NULL) {
     return addition;
   }
-  struct dListNode first = *list;
-  addition.value = value;
-
-  struct dListNode current = first;
-  while(current.next != NULL) {
-
-  }
+  struct dListNode beforeAddition = *pos;
+  struct dListNode next = beforeAddition.next;
+  beforeAddition.next = addition;
+  addition.prev = beforeAddition;
+  addition.next = next;
 }
 
 int main(void) {

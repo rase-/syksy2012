@@ -22,8 +22,12 @@ Cosine similarity has a range of [-1, 1]. The values of $cos(x, y)$ will range f
 No. Since the cosine similarity measures the cosine of the angle between the two vectors, $x$ and $y$, the vectors need not be exactly the same for the cosine similarity $cos(x,y)$ to be equal to $1$. Instead they just need to be parallel (can even point in opposite direction). However, if the cosine similarity $cos(x,y) = 1$, then we know that vectors $x$ and $y$ differ from each other only by a constant factor.
 
 \subsection{c}
-\begin{equation}
-r = \frac{\sum_{i=1}^{n} (x_i - \bar{x}) (y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x}) \sum_{i=1}^{n} (y_i - \bar{y})}}
-\end{equation}
+If we look at how cosine similarity is defined, it is basically the dot product of two given vectors, divided by the the product of the norms of the two vectors: $\frac{x^Ty}{||x|| ||y||}$. Correlation is defined as $\frac{cov(x, y)}{\sigma_x \sigma_y}$, where $\sigma$ stands for standard deviation, and $cov$ is the covariance between the given vectors. We can see by the definition of $\sigma$ and the definition of $cov$ that correlation is exactly the same as cosine similarity, but the data is "centered", which means that the mean of each column/feature is is deducted from each data point. If we do this as a preprocessing step to our data, the cosine similarity of this preprocessed data is exactly the same as the correlation of the original data. 
+
+\subsection{d}
+Cosine similarity in the case of a norm of 1 can be written in the form $x^T y$, which on a lower level can be written as $\sum_{i=1}^{n} x_i  y_i$. Euclidean distance is defined as $d(x,y) = \sum_{i=1}^{n} (x_i - y_i)^2$. As we can see, where in cosine similarity we would sum the product of each term in input x and y, in euclidean distance the second power of their subtraction. 
+
+\subsection{e}
+When all data points have been standardized by subtracting their mean and dividing by standard deviation, correlation can be calculated merely by $\fract{1}{n - 1} \sum_{i=1}^{n} x_i y_i$. 
 
 \end{document}
