@@ -28,6 +28,15 @@ If we look at how cosine similarity is defined, it is basically the dot product 
 Cosine similarity in the case of a norm of 1 can be written in the form $x^T y$, which on a lower level can be written as $\sum_{i=1}^{n} x_i  y_i$. Euclidean distance is defined as $d(x,y) = \sum_{i=1}^{n} (x_i - y_i)^2$. As we can see, where in cosine similarity we would sum the product of each term in input x and y, in euclidean distance the second power of their subtraction. 
 
 \subsection{e}
-When all data points have been standardized by subtracting their mean and dividing by standard deviation, correlation can be calculated merely by $\fract{1}{n - 1} \sum_{i=1}^{n} x_i y_i$. 
+
+\section{ex 3}
+\subsection{a}
+Let $\mathcal{A}$ be a set of more than one objects. The proximity among the objects in this set can be defined in many differenet ways. One of these is the maximum of the distance between two points in the set. Another might be the mean distance between any two points in $\mathcal{A]$. Here distance refers to some measure of distance for example euclidean distance. 
+
+\subsection{b}
+The distance between two sets of points in euclidean space could be intuitively defined as the distance between the medoids (centers of mass) of these two sets. Another approach would be to define the distance as the minimum distance between any two points $a$ and $b$, where $a\in A$ and $b\in B$.
+
+\subsection{c}
+As the minimum of all the euclidean distances between points $a\in A$ and $b\in B$.
 
 \end{document}
