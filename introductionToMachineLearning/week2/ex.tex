@@ -25,18 +25,22 @@ No. Since the cosine similarity measures the cosine of the angle between the two
 If we look at how cosine similarity is defined, it is basically the dot product of two given vectors, divided by the the product of the norms of the two vectors: $\frac{x^Ty}{||x|| ||y||}$. Correlation is defined as $\frac{cov(x, y)}{\sigma_x \sigma_y}$, where $\sigma$ stands for standard deviation, and $cov$ is the covariance between the given vectors. We can see by the definition of $\sigma$ and the definition of $cov$ that correlation is exactly the same as cosine similarity, but the data is "centered", which means that the mean of each column/feature is is deducted from each data point. If we do this as a preprocessing step to our data, the cosine similarity of this preprocessed data is exactly the same as the correlation of the original data. 
 
 \subsection{d}
-Cosine similarity in the case of a norm of 1 can be written in the form $x^T y$, which on a lower level can be written as $\sum_{i=1}^{n} x_i  y_i$. Euclidean distance is defined as $d(x,y) = \sum_{i=1}^{n} (x_i - y_i)^2$. As we can see, where in cosine similarity we would sum the product of each term in input x and y, in euclidean distance the second power of their subtraction. 
+For these types of vectors their variance is n times the sum of squared attribute values, and the correlation is dot product over n.
+\begin{equation}
+d(x,y)=\sqrt{\sum_{i=1}^{n} (x_i - y_i)^2} = \sqrt{\sum_{i=1}^{n} x_i^2 - 2x_iy_i + y_i^2} = \sqrt{1 - 2cos(x,y) + 1} = \sqrt{2(1 - cos(x,y))}
+\end{equation}
 
 \subsection{e}
+If all the values are standardized for both variables x and y, we now have a situation where both vectors have a mean of 0 and a standard deviation of 1. That means that the variance of these vectors is just n times the sum of squared attribute values. Also in this case the correlation between them is only their dot product over n: $d(x,y)=\sqrt{n - 2ncor(x,y) + n} = \sqrt{2n(1-cor(x,y))}$.
 
 \section{ex 3}
 \subsection{a}
-Let $\mathcal{A}$ be a set of more than one objects. The proximity among the objects in this set can be defined in many differenet ways. One of these is the maximum of the distance between two points in the set. Another might be the mean distance between any two points in $\mathcal{A]$. Here distance refers to some measure of distance for example euclidean distance. 
+Let $\mathcal{A}$ be a set of more than one objects. The proximity among the objects in this set can be defined in many different ways. One of these is the maximum of the distance between two points in the set. Another might be the mean distance between any two points in $\mathcal{A}$. Here distance refers to some measure of distance for example euclidean distance. 
 
 \subsection{b}
 The distance between two sets of points in euclidean space could be intuitively defined as the distance between the medoids (centers of mass) of these two sets. Another approach would be to define the distance as the minimum distance between any two points $a$ and $b$, where $a\in A$ and $b\in B$.
 
 \subsection{c}
-As the minimum of all the euclidean distances between points $a\in A$ and $b\in B$.
+As the minimum of all the proximity measures between points $a\in A$ and $b\in B$, or once again we could define this for the medoid of the sets. The first one seems more logical to me though.
 
 \end{document}
